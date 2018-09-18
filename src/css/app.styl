@@ -1,0 +1,79 @@
+// app global css
+@import '~variables'
+
+* {
+  font-family $font-primary
+}
+
+p, li {
+  font-size .85rem
+  color $accent-dark
+  line-height 1.25rem
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  cursor pointer
+  border 0
+  background none
+  text-transform uppercase
+  &:focus {
+    outline: none
+  }
+
+  &.black {
+    border 1px solid $primary-dark
+    padding .6rem 2rem
+    font-size .9rem
+    background-color $primary-dark
+    color $primary-light
+    border-radius 5px;
+    transition all .5s ease
+    &:hover {
+      background-color $accent-lightest
+      color $primary-dark
+      font-weight 700
+    }
+  }
+}
+
+h1, h2, h3 {
+  margin 0
+  padding .7rem 0
+  font-family $font-display
+}
+
+h1
+  font-size 3.2rem
+h2
+  font-size 2.5rem
+  letter-spacing .4rem
+h3
+  font-size 1.7rem
+
+.link {
+  cursor pointer
+  color $secondary
+  &:hover {
+    text-decoration underline
+  }
+}
+
+.section {
+  &--light {
+    border 1px solid $accent-light
+    border-right 0
+    border-left 0
+  }
+
+  &--dark {
+    background-color $accent-lightest
+  }
+
+  &__content {
+    width 80vw
+    margin 0 auto
+    padding 9rem 0
+  }
+}

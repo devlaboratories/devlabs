@@ -1,0 +1,63 @@
+<template>
+  <header>
+    <div class="header__content">
+      <h1>Devlabs</h1>
+      <div class="heading">Welcome to our lab</div>
+      <p>
+        We are digital artisans and passionate software craftsmen fueled by caffeine. We are obsessed in figuring out the best solutions that clients need. We are the catalyst that your idea needs. Let's build it.
+      </p>
+      <button class="btn black">Let's get started</button>
+    </div>
+  </header>
+</template>
+
+<script>
+export default {
+  name: 'Masthead'
+}
+</script>
+
+<style lang="stylus" scoped>
+@import '~variables'
+header {
+  background-color $primary-light
+  background linear-gradient(
+    to bottom,
+    $primary-light,
+    rgba($accent-lightest, .10),
+    $primary-light
+    ),
+    url('~assets/images/bulb.jpg')
+  background-size cover
+  background-position center
+  height 100vh
+}
+
+.header__content {
+  margin 0 auto
+  width 80vw
+  height 100%
+  display grid
+  align-content center
+  justify-items start
+  grid-row-gap 2rem
+  h1 {
+    margin 0
+    font-size 1.5rem
+    color $accent-neutral
+    font-family $font-primary
+  }
+  .heading, p {
+    width 50%
+  }
+  .heading {
+    font-size 4.5rem
+    font-family $font-display
+    line-height 4.5rem
+  }
+  p {
+    font-size 1rem
+    color $accent-dark
+  }
+}
+</style>
