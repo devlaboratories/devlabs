@@ -1,6 +1,6 @@
 <template>
   <section class="section section--dark">
-    <div class="section__content">
+    <div class="section__content features">
       <div class="feature">
         <q-icon name="fas fa-flask" size="2.5rem" />
         <div class="content">
@@ -42,7 +42,7 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~variables'
-.section__content {
+.features {
   display grid
   grid-template-columns repeat(auto-fit, minmax(20rem, 1fr))
   grid-column-gap 3rem

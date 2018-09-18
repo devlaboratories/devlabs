@@ -5,6 +5,11 @@
   font-family $font-primary
 }
 
+*::selection {
+  background-color $primary-dark
+  color $secondary
+}
+
 p, li {
   font-size .85rem
   color $accent-dark
@@ -75,5 +80,8 @@ h3
     width 80vw
     margin 0 auto
     padding 9rem 0
+    &.heading {
+      padding-bottom 3rem
+    }
   }
 }

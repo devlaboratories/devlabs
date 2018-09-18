@@ -107,6 +107,7 @@ h6 {
   margin-top 0
   font-family $font-display
   font-size 1.2rem
+  color $accent-darkest
 }
 
 </style>

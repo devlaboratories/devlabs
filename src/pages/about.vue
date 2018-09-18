@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <section class="section section--dark">
       <div class="section__content heading">
         <h2 class="text-center">DEVLABS</h2>
@@ -78,9 +78,6 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~variables'
-.heading {
-  padding-bottom 3rem
-}
 .mission {
   padding 3rem 0
   &__title {
@@ -101,11 +98,14 @@ export default {
 .team {
   &__item {
     margin 0 auto
-    padding 3rem 10vw
+    padding 2.5rem 10vw
     display flex
     align-items flex-start
     &:not(:last-child) {
       border-bottom 1px solid $accent-light
+    }
+    &:hover {
+      background-color $accent-lightest
     }
 
     &__img {
@@ -121,6 +121,7 @@ export default {
         font-family $font-display
         font-size 1.15rem
         font-weight 700
+        color $accent-darkest
       }
       .handle {
         color $secondary
