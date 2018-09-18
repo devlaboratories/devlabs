@@ -7,6 +7,9 @@
 <script>
 export default {
   name: 'App',
+  created () {
+    this.$q.addressbarColor.set()
+  },
   meta: {
     link: {
       fonts: {

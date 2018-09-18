@@ -20,7 +20,7 @@ export default {
 <style lang="stylus" scoped>
 @import '~variables'
 header {
-  background-color $primary-light
+  background-color $accent-light
   background linear-gradient(
     to bottom,
     $primary-light,
