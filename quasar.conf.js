@@ -30,6 +30,9 @@ module.exports = function (ctx) {
           loader: 'eslint-loader',
           exclude: /(node_modules|quasar)/
         })
+      },
+      chainWebpack (chain) {
+        chain.resolve.alias.set('statics', require('path').resolve(__dirname, './src/statics'))
       }
     },
     devServer: {

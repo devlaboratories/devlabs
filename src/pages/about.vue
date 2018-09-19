@@ -2,21 +2,17 @@
   <div>
     <section class="section section--dark">
       <div class="section__content heading">
-        <h2 class="text-center">DEVLABS</h2>
+        <h2 class="text-center uppercase">{{companyName}}</h2>
       </div>
     </section>
     <section class="section section--light">
       <div class="mission section__content">
         <p class="mission__title q-mb-lg">WHO WE ARE</p>
-        <p class="mission__text">
-          We're a group of passionate individuals based in Manila, Philippines ready and eager to work with you in building targeted software solutions that best suit your needs and demands &mdash; just the right balance of form that compliments function, technical expertise, and user-oriented along with technical consulting.
-        </p>
-        <p class="mission__text">
-          We are life-long learners. We take caffeine and energy drinks, turn it into bits and circuits. We believe that life is too short to be mediocre - yes, it's not easy, and that's why we're doing this. There's no greater joy than witnessing your own ideas manifest into reality.
-        </p>
-        <p class="mission__text">
-          Call it divinity or evolution, whatever it is, you can't deny it. The ability to create, build, and appreciate the whole process is exclusive to humans. It's what sets us apart from other species. Join us, build your projects or train with us.
-        </p>
+        <p class="mission__text"
+          v-for="(p, index) in companyInfo.we"
+          :key="index"
+          v-html="p"
+          />
         <div class="text-center">
           <button class="btn black">Have something in mind?</button>
         </div>
@@ -26,44 +22,14 @@
       <h3 class="text-center">OUR TEAM</h3>
     </section>
     <section class="section section--light">
-      <div class="team__item">
-        <img class="team__item__img" src="~assets/images/team/harvey.jpg">
+      <div class="team__item" v-for="member in companyInfo.team" :key="member.id">
+        <img class="team__item__img" v-if="member.image" :src="`statics/images/team/${member.image}`">
+        <img class="team__item__img" v-else src="~assets/images/team/harvey.jpg">
         <div class="team__item__side">
-          <h6 class="name">Joseph Harvey Angeles</h6>
-          <p class="handle">@yhev</p>
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, perspiciatis voluptate! Totam nam molestias odit vel necessitatibus numquam dolore qui delectus. Odit itaque illum, dicta labore consequatur vitae animi, doloribus voluptates cum odio ab quos ullam excepturi nihil unde. Cum, quaerat doloremque. Minima, cumque consectetur adipisci voluptatibus explicabo iste quis.
-          </p>
-        </div>
-      </div>
-      <div class="team__item">
-        <img class="team__item__img" src="~assets/images/team/martin.jpg">
-        <div class="team__item__side">
-          <h6 class="name">Martin de Guzman</h6>
-          <p class="handle">@martindeguzman9</p>
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, perspiciatis voluptate! Totam nam molestias odit vel necessitatibus numquam dolore qui delectus. Odit itaque illum, dicta labore consequatur vitae animi, doloribus voluptates cum odio ab quos ullam excepturi nihil unde. Cum, quaerat doloremque. Minima, cumque consectetur adipisci voluptatibus explicabo iste quis.
-          </p>
-        </div>
-      </div>
-      <div class="team__item">
-        <img class="team__item__img" src="~assets/images/team/seth.jpg">
-        <div class="team__item__side">
-          <h6 class="name">Seth Juriste Aguilar</h6>
-          <p class="handle">@sethjuriste</p>
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, perspiciatis voluptate! Totam nam molestias odit vel necessitatibus numquam dolore qui delectus. Odit itaque illum, dicta labore consequatur vitae animi, doloribus voluptates cum odio ab quos ullam excepturi nihil unde. Cum, quaerat doloremque. Minima, cumque consectetur adipisci voluptatibus explicabo iste quis.
-          </p>
-        </div>
-      </div>
-      <div class="team__item">
-        <img class="team__item__img" src="~assets/images/team/tabor.jpg">
-        <div class="team__item__side">
-          <h6 class="name">Reuben Tabor</h6>
-          <p class="handle">@artnew0rkz</p>
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, perspiciatis voluptate! Totam nam molestias odit vel necessitatibus numquam dolore qui delectus. Odit itaque illum, dicta labore consequatur vitae animi, doloribus voluptates cum odio ab quos ullam excepturi nihil unde. Cum, quaerat doloremque. Minima, cumque consectetur adipisci voluptatibus explicabo iste quis.
-          </p>
+          <h6 class="name">{{member.name}}</h6>
+          <p class="handle" @click="openURL(`https://twitter.com/${member.handle}`)">{{member.handle}}</p>
+          <p class="text" v-if="member.description" v-html="member.description"/>
+          <p class="text" v-else>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, perspiciatis voluptate! Totam nam molestias odit vel necessitatibus numquam dolore qui delectus. Odit itaque illum, dicta labore consequatur vitae animi, doloribus voluptates cum odio ab quos ullam excepturi nihil unde. Cum, quaerat doloremque. Minima, cumque consectetur adipisci voluptatibus explicabo iste quis.</p>
         </div>
       </div>
     </section>
@@ -71,8 +37,18 @@
 </template>
 
 <script>
+import {name} from '../../package.json'
+import DATA from 'statics/data/about.json'
+import {openURL} from 'quasar'
 export default {
-  name: 'About'
+  name: 'About',
+  created () {
+    this.companyName = name
+    this.companyInfo = DATA
+  },
+  methods: {
+    openURL
+  }
 }
 </script>
 

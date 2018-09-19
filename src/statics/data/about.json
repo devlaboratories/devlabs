@@ -1,0 +1,37 @@
+{
+  "we": [
+    "We're a group of passionate individuals based in Manila, Philippines ready and eager to work with you in building targeted software solutions that best suit your needs and demands — just the right balance of form that compliments function, technical expertise, and user-oriented along with technical consulting.",
+    "We are life-long learners. We take caffeine and energy drinks, turn it into bits and circuits. We believe that life is too short to be mediocre - yes, it's not easy, and that's why we're doing this. There's no greater joy than witnessing your own ideas manifest into reality.",
+    "Call it divinity or evolution, whatever it is, you can't deny it. The ability to create, build, and appreciate the whole process is exclusive to humans. It's what sets us apart from other species. Join us, build your projects or train with us."
+  ],
+  "team": [
+    {
+      "id": 1,
+      "image": "harvey.jpg",
+      "name": "Joseph Harvey Angeles",
+      "handle": "@yev",
+      "description": ""
+    },
+    {
+      "id": 2,
+      "image": "martin.jpg",
+      "name": "Martin de Guzman",
+      "handle": "@martindequzman9",
+      "description": ""
+    },
+    {
+      "id": 3,
+      "image": "seth.jpg",
+      "name": "Seth Juriste Aguilar",
+      "handle": "@sethjuriste",
+      "description": ""
+    },
+    {
+      "id": 4,
+      "image": "tabor.jpg",
+      "name": "Reuben Tabor",
+      "handle": "@artnetw0rkz",
+      "description": ""
+    }
+  ]
+}

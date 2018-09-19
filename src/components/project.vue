@@ -1,19 +1,23 @@
-<template>
+<template functional>
   <q-card inline>
     <q-card-media>
-      <img src="statics/logo.png" >
+      <img v-if="props.project && props.project.image" :src="`statics/${props.project.image}`" >
+      <img v-else src="statics/logo.png" >
     </q-card-media>
     <q-card-separator />
     <q-card-main>
-      <p class="title">Project Title</p>
-      <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus quia totam corrupti, assumenda dolorum accusamus quisquam repellat aliquid voluptates, dolores provident ad. Exercitationem dolorum quod delectus nulla id est labore.</p>
+      <p v-if="props.project && props.project.name" class="title">{{props.project.name}}</p>
+      <p v-else class="title">Project</p>
+      <p v-if="props.project && props.project.description" class="text">{{props.project.description}}</p>
+      <p v-else class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus quia totam corrupti, assumenda dolorum accusamus quisquam repellat aliquid voluptates, dolores provident ad. Exercitationem dolorum quod delectus nulla id est labore.</p>
     </q-card-main>
   </q-card>
 </template>
 
 <script>
 export default {
-  name: 'Project'
+  name: 'Project',
+  props: ['project']
 }
 </script>
 

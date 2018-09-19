@@ -7,32 +7,22 @@
     </section>
     <section class="section section--light">
       <div class="projects">
-        <project />
-        <project />
-        <project />
+        <project
+          v-for="project in clientProjects"
+          :key="project.id"
+          :project="project"
+        />
       </div>
       <div class="playground q-py-xl">
         <p class="title">Playground</p>
         <ul>
-          <li>
-            <div class="icon"></div>
-            <div class="project-details">
-              <p class="project-name">Chronocross</p>
-              <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ratione accusantium saepe sint officiis laborum distinctio ducimus sunt sit! Facilis.</p>
+          <li v-for="project in playground" :key="project.id">
+            <div class="icon">
+              <img v-if="project.image" :src="`statics/${project.image}`">
             </div>
-          </li>
-          <li>
-            <div class="icon"></div>
             <div class="project-details">
-              <p class="project-name">Chronocross</p>
-              <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ratione accusantium saepe sint officiis laborum distinctio ducimus sunt sit! Facilis.</p>
-            </div>
-          </li>
-          <li>
-            <div class="icon"></div>
-            <div class="project-details">
-              <p class="project-name">Chronocross</p>
-              <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ratione accusantium saepe sint officiis laborum distinctio ducimus sunt sit! Facilis.</p>
+              <p class="project-name">{{project.name || 'Project'}}</p>
+              <p class="project-description">{{project.description || 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ratione accusantium saepe sint officiis laborum distinctio ducimus sunt sit! Facilis.'}}</p>
             </div>
           </li>
         </ul>
@@ -42,10 +32,16 @@
 </template>
 
 <script>
+import CLIENT_PROJECTS from 'statics/data/projects/clients.json'
+import PLAY_PROJECTS from 'statics/data/projects/playground.json'
 import Project from 'components/project'
 export default {
   name: 'Work',
-  components: { Project }
+  components: { Project },
+  created () {
+    this.clientProjects = CLIENT_PROJECTS
+    this.playground = PLAY_PROJECTS
+  }
 }
 </script>
 
@@ -84,6 +80,9 @@ export default {
         margin-right 1rem
         border-radius 50%
         vertical-align middle
+        img {
+          object-fit cover
+        }
       }
 
       .project-name {

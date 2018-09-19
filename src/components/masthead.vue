@@ -1,19 +1,18 @@
-<template>
+<template functional>
   <header>
     <div class="header__content">
-      <h1>Devlabs</h1>
-      <div class="heading">Welcome to our lab</div>
-      <p>
-        We are digital artisans and passionate software craftsmen fueled by caffeine. We are obsessed in figuring out the best solutions that clients need. We are the catalyst that your idea needs. Let's build it.
-      </p>
-      <button class="btn black">Let's get started</button>
+      <h1 class="capitalize">{{props.companyName || 'devlabs'}}</h1>
+      <div class="heading">{{props.heading || 'Welcome to our lab'}}</div>
+      <p>{{props.intro || 'We are digital artisans and passionate software craftsmen fueled by caffeine. We are obsessed in figuring out the best solutions that clients need. We are the catalyst that your idea needs. Let\'s build it.'}}</p>
+      <button class="btn black" @click="listeners.click">Let's get started</button>
     </div>
   </header>
 </template>
 
 <script>
 export default {
-  name: 'Masthead'
+  name: 'Masthead',
+  props: ['companyName', 'heading', 'intro']
 }
 </script>
 

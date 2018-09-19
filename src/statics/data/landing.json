@@ -1,0 +1,64 @@
+{
+  "masthead": {
+    "headline": "Welcome to our lab",
+    "introduction": "We are digital artisans and passionate software craftsmen fueled by caffeine. We are obsessed in figuring out the best solutions that clients need. We are the catalyst that your idea needs. Let's build it."
+  },
+  "features": [
+    {
+      "id": 1,
+      "icon": "fas fa-flask",
+      "title": "Technical Excellence",
+      "description": "At our lab, we pride ourselves with excellence mindset. We strive to know the in's-and-out's of whatever technology we're using, resulting to quality output. We adhere to the <a class=\"link\" href=\"http://manifesto.softwarecraftsmanship.org/\" target=\"__blank\">Software craftsmanship manifesto</a> as our credo."
+    },
+    {
+      "id": 2,
+      "icon": "far fa-lightbulb",
+      "title": "Innovative Ideas",
+      "description": "Innovation is in our blood. When we're not working, we're innovating, fiddling with new software and hardware technologies, building stuff. This innovation habit will reflect back into our work and services that we provide you."
+    },
+    {
+      "id": 3,
+      "icon": "fas fa-user-astronaut",
+      "title": "User-oriented",
+      "description": "Ultimately, your product ends up on your users - their experience on the product will be their impression on you and your business. Our work finds the right balance between what your user needs, and what we and you think they need."
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "icon": "fas fa-keyboard",
+      "title": "Software Development",
+      "description": "<span class=\"text-secondary\">Delivering your needs and exceeding your expections</span> is our success. The lab is fully-equipped with technologies and creativity that will surely provide you the best yet cost-efficient Desktop, Web or Mobile applications."
+    },
+    {
+      "id": 2,
+      "icon": "fas fa-database",
+      "title": "Database Design and Optimization",
+      "description": "Service availability relies on data availability so as data availability relies on the backend architecture of an application. So we provide an engineered DB design that is normalized and optimized."
+    },
+    {
+      "id": 3,
+      "icon": "fas fa-server",
+      "title": "Computer Networking",
+      "description": "The laboratory is here to deliver a network design that best suits your workplace. Security, Reliability, and Availabilty are on top of our priority in providing you a converged network."
+    },
+    {
+      "id": 4,
+      "icon": "fas fa-magic",
+      "title": "UI/UX Design",
+      "description": "<span class=\"text-secondary\">Form complimenting function.</span> We design interface that highlights your niche and includes strategic content architecture. It is also our duty to comply with the industry standards while modernizing your interface and experience."
+    },
+    {
+      "id": 5,
+      "icon": "fas fa-university",
+      "title": "Trainings & Tutorials",
+      "description": "<span class=\"text-secondary\">Learning is our passion</span> and we love to share it with you. This will equip you with the essential knowledge in facing the high IT demand of the industry."
+    },
+    {
+      "id": 6,
+      "icon": "fas fa-user-secret",
+      "title": "Consulting",
+      "description": "Have any problems or uncertainties? The lab is here to help you. It was built to provide you the optimum solution to your impediments."
+    }
+  ]
+}

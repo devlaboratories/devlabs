@@ -17,11 +17,14 @@
       </div>
       <div class="side side--copyright">
         <div class="socials">
-          <div class="socials__link">
+          <div class="socials__link" @click="openURL('https://github.com/devlaboratories/')">
             <q-icon name="fab fa-github" size="1.4rem"/>
           </div>
-          <div class="socials__link">
+          <div class="socials__link" @click="openURL('https://twitter.com/DevLaboratories')">
             <q-icon name="fab fa-twitter" size="1.4rem"/>
+          </div>
+          <div class="socials__link" @click="openURL('https://www.facebook.com/devlaboratories/')">
+            <q-icon name="fab fa-facebook" size="1.4rem"/>
           </div>
           <div class="socials__link">devlaboratories@gmail.com</div>
         </div>
@@ -32,8 +35,12 @@
 </template>
 
 <script>
+import {openURL} from 'quasar'
 export default {
-  name: 'Footnote'
+  name: 'Footnote',
+  methods: {
+    openURL
+  }
 }
 </script>
 
