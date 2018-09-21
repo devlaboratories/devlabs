@@ -17,11 +17,9 @@
         <p class="title">Playground</p>
         <ul>
           <li v-for="project in playground" :key="project.id">
-            <div class="icon">
-              <img v-if="project.image" :src="`statics/${project.image}`">
-            </div>
+            <img v-if="project.image" class="icon" :src="`statics/images/projects/playground/${project.image}`">
             <div class="project-details">
-              <p class="project-name">{{project.name || 'Project'}}</p>
+              <p class="project-name" @click="openURL(project.link)">{{project.name || 'Project'}}</p>
               <p class="project-description">{{project.description || 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ratione accusantium saepe sint officiis laborum distinctio ducimus sunt sit! Facilis.'}}</p>
             </div>
           </li>
@@ -35,12 +33,16 @@
 import CLIENT_PROJECTS from 'statics/data/projects/clients.json'
 import PLAY_PROJECTS from 'statics/data/projects/playground.json'
 import Project from 'components/project'
+import {openURL} from 'quasar'
 export default {
   name: 'Work',
   components: { Project },
   created () {
     this.clientProjects = CLIENT_PROJECTS
     this.playground = PLAY_PROJECTS
+  },
+  methods: {
+    openURL
   }
 }
 </script>
@@ -48,7 +50,7 @@ export default {
 <style lang="stylus" scoped>
 @import '~variables'
 .projects {
-  padding-top 2.5rem
+  padding 3.5rem 0
   width 90vw
   margin 0 auto
   display grid
@@ -74,21 +76,24 @@ export default {
       display flex
       align-items center
       .icon {
-        background-color $accent-darkest
-        min-width 40px
-        min-height 40px
         margin-right 1rem
+        align-self center
+        width 40px
+        max-width 100%
         border-radius 50%
-        vertical-align middle
-        img {
-          object-fit cover
-        }
       }
 
       .project-name {
         font-weight 700
         font-size .95rem
         margin 0
+        display inline-block
+        transition all .3s ease
+        &:hover {
+          text-decoration underline
+          cursor pointer
+          color $secondary
+        }
       }
 
       .project-description {

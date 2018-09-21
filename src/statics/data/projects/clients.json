@@ -1,20 +1,20 @@
 [
   {
     "id": 1,
-    "image": "",
-    "name": "PS Duena IT Solutions",
-    "description": ""
+    "image": "zoom-app.png",
+    "name": "Zoom-app",
+    "description": "An inventory tracking mobile application for delivery personnels."
   },
   {
     "id": 2,
-    "image": "",
-    "name": "Zoom-app",
-    "description": ""
+    "image": "osyshub.png",
+    "name": "OSystemHub",
+    "description": "A progressive suite of system for managing church-related processes."
   },
   {
     "id": 3,
-    "image": "",
-    "name": "OSystemHub",
-    "description": ""
+    "image": "psduena.png",
+    "name": "PS Duena IT Solutions",
+    "description": "Has been a consistent client. We provide them websites, backend API, etc."
   }
 ]

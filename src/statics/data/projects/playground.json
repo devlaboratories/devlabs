@@ -3,26 +3,21 @@
     "id": 1,
     "image": "chronocross.png",
     "name": "Chronocross",
-    "description": ""
+    "description": "A productivity application that combines a standard TODO list, Pomodoro Technique© and the Eisenhower method productivity techniques. Complete with report generation, background-persist mode and others.",
+    "link": "https://play.google.com/store/apps/details?id=org.yevlabs.chronocross"
   },
   {
     "id": 2,
     "image": "jquizzer.png",
     "name": "jQuizzer",
-    "description": ""
+    "description": "Fun little Java Quiz application covering OCAJP 8 Java SE 8 Programmer 1 Certification information.",
+    "link": "https://play.google.com/store/apps/details?id=org.yevlabs.jquizzer"
   },
   {
     "id": 3,
     "image": "memento.png",
-    "name": "Memento",
-    "description": ""
-  },
-  {
-    "id": 4,
-    "image": "clearview.png",
-    "name": "Clear View Escapes",
-    "description": "",
-    "link": "https://martindeguzman.github.io/travel-site/"
+    "name": "MementoNiLoida",
+    "description": "We've voluntered and lent a hand to an AVM Survivor. We created a simple website for her book launch.",
+    "link": "https://www.mementoniloida.xyz/"
   }
-
 ]

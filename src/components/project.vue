@@ -1,7 +1,7 @@
 <template functional>
   <q-card inline>
     <q-card-media>
-      <img v-if="props.project && props.project.image" :src="`statics/${props.project.image}`" >
+      <img v-if="props.project && props.project.image" :src="`statics/images/projects/clients/${props.project.image}`" >
       <img v-else src="statics/logo.png" >
     </q-card-media>
     <q-card-separator />
@@ -27,8 +27,9 @@ export default {
   box-shadow none
   border 1px solid $accent-light
   transition all .3s ease
+  cursor pointer
   &:hover {
-    border 1px solid $accent-neutral
+    box-shadow 0 .5rem 1rem .5rem rgba($accent-darkest, .1)
   }
   .title {
     margin 0
@@ -40,7 +41,8 @@ export default {
   }
 }
 img {
-  width 150px
+  width 100px
+  padding 1rem 0
   margin 0 auto
 }
 .q-card-media {

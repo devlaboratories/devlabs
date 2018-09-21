@@ -104,6 +104,11 @@ export default {
         font-family $font-display
         font-size .7rem
         margin 0
+        cursor pointer
+        &:hover {
+          font-weight 700
+          font-style italic
+        }
       }
       .text {
         margin-top .2rem
