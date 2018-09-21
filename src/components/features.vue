@@ -25,6 +25,9 @@ export default {
   display grid
   grid-template-columns repeat(auto-fit, minmax(20rem, 1fr))
   grid-column-gap 3rem
+  +respond-max($breakpoint-sm) {
+    grid-template-columns 1fr
+  }
   .feature {
     display flex
     justify-content space-between

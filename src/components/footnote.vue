@@ -56,6 +56,9 @@ export default {
   align-items center
   align-content space-between
   flex-wrap wrap
+  +respond-max($breakpoint-sm) {
+    width 90vw
+  }
 }
 .logo {
   display flex

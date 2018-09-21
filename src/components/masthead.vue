@@ -40,6 +40,9 @@ header {
   align-content center
   justify-items start
   grid-row-gap 2rem
+  +respond-max($breakpoint-xxs) {
+    grid-row-gap .2rem
+  }
   h1 {
     margin 0
     font-size 1.5rem
@@ -48,15 +51,31 @@ header {
   }
   .heading, p {
     width 50%
+    +respond-max($breakpoint-sm) {
+      width 80%
+    }
+    +respond-max($breakpoint-xs) {
+      width 100%
+    }
   }
   .heading {
     font-size 4.5rem
     font-family $font-display
     line-height 4.5rem
+    +respond-max($breakpoint-xs) {
+      font-size 3rem
+      line-height 3rem
+    }
+    +respond-max($breakpoint-xxs) {
+      font-size 2.8rem
+    }
   }
   p {
     font-size 1rem
     color $accent-dark
+    +respond-max($breakpoint-xxs) {
+      font-size .8rem
+    }
   }
 }
 </style>

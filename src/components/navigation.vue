@@ -9,6 +9,7 @@
       <router-link tag="li" to="/blog">blog</router-link>
       <li>contact</li>
     </ul>
+    <!-- <q-btn round flat color="black" icon="fas fa-bars" class="hamburger"/> -->
   </nav>
 </template>
 
@@ -32,6 +33,14 @@ nav {
   right 12rem
   width 36vw
   padding 0
+  +respond-max($breakpoint-md) {
+    right 2rem
+  }
+  +respond-max($breakpoint-sm) {
+    width 100%
+    right 0
+  padding 0 10%
+  }
   ul {
     padding 0
     margin 0

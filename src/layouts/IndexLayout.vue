@@ -15,9 +15,11 @@ import Navigation from 'components/navigation'
 import Footnote from 'components/footnote'
 export default {
   name: 'IndexLayout',
-  components: { Navigation, Footnote }
+  components: { Navigation, Footnote },
+  data () {
+    return {
+      showing: true
+    }
+  }
 }
 </script>
-
-<style lang="stylus" scoped>
-</style>

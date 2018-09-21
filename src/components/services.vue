@@ -31,6 +31,11 @@ export default {
   grid-template-columns repeat(auto-fit, minmax(25rem, 1fr))
   grid-column-gap 3.5rem
   grid-row-gap 3rem
+
+  +respond-max($breakpoint-xs) {
+    grid-template-columns 1fr
+  }
+
   .service {
     display flex
     align-items baseline
@@ -45,6 +50,20 @@ export default {
       flex-direction row-reverse
       .content {
         margin-left 1rem
+      }
+    }
+
+    +respond-max($breakpoint-xs) {
+      &:nth-child(odd), &:nth-child(even) {
+        flex-direction column-reverse
+        .content {
+          margin 0
+          margin-top 2rem
+          text-align left
+          h6 {
+            text-align center
+          }
+        }
       }
     }
 
