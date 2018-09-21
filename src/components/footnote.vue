@@ -9,7 +9,7 @@
         </div>
 
         <ul>
-          <li>Home</li>
+          <router-link tag="li" exact to="/">Home</router-link>
           <li>Privacy Policy</li>
           <li>Terms and Conditions</li>
         </ul>
