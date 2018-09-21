@@ -14,7 +14,7 @@
           v-html="p"
           />
         <div class="text-center">
-          <button class="btn black">Have something in mind?</button>
+          <button class="btn black" @click="openURL('https://m.me/devlaboratories')">Have something in mind?</button>
         </div>
       </div>
     </section>
