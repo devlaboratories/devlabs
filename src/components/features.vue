@@ -28,11 +28,12 @@ export default {
   .feature {
     display flex
     justify-content space-between
-    align-items flex-start
+    align-items baseline
 
     .q-icon {
       margin-top 1rem
       margin-right 1rem
+      align-self flex-start
     }
   }
 }

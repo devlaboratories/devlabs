@@ -16,5 +16,13 @@
     "image": "memento.png",
     "name": "Memento",
     "description": ""
+  },
+  {
+    "id": 4,
+    "image": "clearview.png",
+    "name": "Clear View Escapes",
+    "description": "",
+    "link": "https://martindeguzman.github.io/travel-site/"
   }
+
 ]

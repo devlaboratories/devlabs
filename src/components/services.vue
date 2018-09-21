@@ -33,7 +33,7 @@ export default {
   grid-row-gap 3rem
   .service {
     display flex
-    align-items center
+    align-items baseline
     &:nth-child(odd) {
       flex-direction flex-start
       text-align right
@@ -53,6 +53,7 @@ export default {
       background-color $accent-dark
       border-radius 50%
       color $accent-lightest
+      align-self center
     }
   }
 }
