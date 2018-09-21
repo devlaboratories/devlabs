@@ -22,7 +22,7 @@ export default {
 <style lang="stylus" scoped>
 @import '~variables'
 .router-link-active {
-  color $secondary
+  color $secondary !important
   transform scale(1.05)
 }
 nav {
