@@ -104,6 +104,7 @@ export default {
         font-family $font-display
         font-size .7rem
         margin 0
+        display inline-block
         cursor pointer
         &:hover {
           font-weight 700

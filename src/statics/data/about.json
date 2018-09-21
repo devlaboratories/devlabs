@@ -9,28 +9,28 @@
       "image": "harvey.jpg",
       "name": "Joseph Harvey Angeles",
       "handle": "@yev",
-      "description": ""
+      "description": "A passionate software engineer who really loves building stuff. He's the author of <a class=\"link\" href=\"https://play.google.com/store/apps/details?id=org.yevlabs.chronocross\" target=\"_blank\">Chronocross</a> and <a class=\"link\" href=\"https://play.google.com/store/apps/details?id=org.yevlabs.jquizzer\" target=\"_blank\">jQuizzer</a>. Aside from fiddling with new technologies and running his <a class=\"link\" href=\"https://www.josephharveyangeles.com/blog\" target=\"_blank\">blog</a>, he also plays around with Raspberry Pi and embedded systems in his free time. You can always find him either infront of a computer or hanging out near a cat."
     },
     {
       "id": 2,
       "image": "martin.jpg",
       "name": "Martin de Guzman",
       "handle": "@martindequzman9",
-      "description": ""
+      "description": "Even since college, he's always been the go-to guy when it comes to database optimizations. After graduating, he's been working as a software engineer focusing on the B2B industry. He's always working on new ideas that will greatly help our clients."
     },
     {
       "id": 3,
       "image": "seth.jpg",
       "name": "Seth Juriste Aguilar",
       "handle": "@sethjuriste",
-      "description": ""
+      "description": "He's another B2B expert within our lab. He has a knack for building UI, writing case studies and gathering system requirements down to the last relevant information. When he's not working, he's playing music or doing ministry."
     },
     {
       "id": 4,
       "image": "tabor.jpg",
       "name": "Reuben Tabor",
       "handle": "@artnetw0rkz",
-      "description": ""
+      "description": "Our resident Network Engineer expert. While we all have some knowledge in computer networks, He has pursued the field as his forte having both CCNA and CCNP Certifications under his belt."
     }
   ]
 }
