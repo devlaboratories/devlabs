@@ -2,7 +2,7 @@
   <section class="section section--dark">
     <div class="feedback" v-for="client in props.clients" :key="client.id">
       <p class="statement">{{client.statement}}</p>
-      <p class="author">{{client.author}}</p>
+      <p class="author">&mdash; {{client.author}}</p>
     </div>
   </section>
 </template>
