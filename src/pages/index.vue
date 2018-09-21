@@ -6,8 +6,8 @@
       :intro="masthead.introduction"
       @click="getStarted"
     />
-    <clients />
     <features :features="features" />
+    <clients :clients="clients" />
     <services :services="services" />
   </div>
 </template>
@@ -26,6 +26,7 @@ export default {
     this.companyName = name
     this.masthead = DATA.masthead
     this.features = DATA.features
+    this.clients = DATA.clients
     this.services = DATA.services
   },
   methods: {

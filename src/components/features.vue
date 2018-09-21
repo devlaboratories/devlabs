@@ -1,5 +1,5 @@
 <template functional>
-  <section class="section section--dark">
+  <section class="section section--light">
     <div class="section__content features">
       <div class="feature" v-for="feature in props.features" :key="feature.id">
         <q-icon :name="feature.icon" size="2.5rem" />
@@ -21,6 +21,9 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~variables'
+section {
+  border-top none
+}
 .features {
   display grid
   grid-template-columns repeat(auto-fit, minmax(20rem, 1fr))
