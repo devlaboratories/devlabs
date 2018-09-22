@@ -8,7 +8,7 @@
     </q-page-container>
     <footnote></footnote>
     <q-modal v-model="showContact">
-      <contact @submit="showNotify()" @error="showError"/>
+      <contact @submitted="showNotify()" @error="showError()"/>
     </q-modal>
   </q-layout>
 </template>
@@ -20,6 +20,11 @@ import Contact from 'components/contact'
 export default {
   name: 'IndexLayout',
   components: { Navigation, Footnote, Contact },
+  created () {
+    this.$root.$on('showContact', () => {
+      this.showContact = true
+    })
+  },
   data () {
     return {
       showContact: false
@@ -27,7 +32,7 @@ export default {
   },
   methods: {
     showNotify () {
-      this.$showContact = false
+      this.showContact = false
       this.$q.notify({
         message: 'Message sent!',
         detail: 'Thanks for messaging us, we\'ll get back to you shortly.',

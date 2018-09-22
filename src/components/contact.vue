@@ -32,8 +32,8 @@
         />
       <div class="actions q-mt-lg">
         <div class="socials">
-          <q-icon class="social twitter" name="fab fa-twitter" size="1.5rem" />
-          <q-icon class="social facebook" name="fab fa-facebook-square" size="1.5rem" />
+          <q-icon @click.native="openURL('https://twitter.com/DevLaboratories')" class="social twitter" name="fab fa-twitter" size="1.5rem" />
+          <q-icon @click.native="openURL('https://www.facebook.com/devlaboratories/')" class="social facebook" name="fab fa-facebook-square" size="1.5rem" />
         </div>
         <q-btn :disable="$v.$invalid" type="submit" size="md" class="submit" color="secondary">Submit</q-btn>
       </div>
@@ -44,6 +44,7 @@
 
 <script>
 import {required, email} from 'vuelidate/lib/validators'
+import {openURL} from 'quasar'
 import axios from 'axios'
 export default {
   name: 'Contact',
@@ -60,6 +61,7 @@ export default {
     message: { required }
   },
   methods: {
+    openURL,
     async submit (event) {
       const url = event.target.action
       const data = this.serialize({
@@ -69,20 +71,12 @@ export default {
         message: this.message
       })
       try {
-        const response = await axios.post(url, data, {
+        await axios.post(url, data, {
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
           }
         })
-        // const response = await axios(url, {
-        //   method: 'POST',
-        //   headers: {
-        //     'Content-Type': 'application/x-www-form-urlencoded'
-        //   },
-        //   data
-        // })
-        console.log(response.data)
-        this.$emit('submit')
+        this.$emit('submitted')
       } catch (error) {
         this.$emit('error')
       }
@@ -117,6 +111,9 @@ export default {
     margin 0
     margin-bottom 1rem
     color $accent-light
+    +respond-max($breakpoint-sm) {
+      margin-top 5vh
+    }
   }
 }
 

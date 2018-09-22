@@ -4,7 +4,7 @@
       :companyName="companyName"
       :heading="masthead.headline"
       :intro="masthead.introduction"
-      @click="openURL('https://m.me/devlaboratories')"
+      @click="$root.$emit('showContact')"
     />
     <features :features="features" />
     <clients :clients="clients" />

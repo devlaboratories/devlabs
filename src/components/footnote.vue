@@ -17,9 +17,6 @@
       </div>
       <div class="side side--copyright">
         <div class="socials">
-          <div class="socials__link" @click="openURL('https://github.com/devlaboratories/')">
-            <q-icon name="fab fa-github" size="1.4rem"/>
-          </div>
           <div class="socials__link" @click="openURL('https://twitter.com/DevLaboratories')">
             <q-icon name="fab fa-twitter" size="1.4rem"/>
           </div>

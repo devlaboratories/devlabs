@@ -33,6 +33,7 @@ module.exports = function (ctx) {
           loader: 'eslint-loader',
           exclude: /(node_modules|quasar)/
         })
+        if (process.env.NODE_ENV !== 'production') return
         const prerender = new PrerenderSPAPlugin(path.resolve(__dirname, 'dist/spa-mat'), ['/']) 
         cfg.plugins.push(prerender)
       },
