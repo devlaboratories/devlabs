@@ -7,9 +7,8 @@
       <router-link tag="li" to="/about">about</router-link>
       <router-link tag="li" to="/work">work</router-link>
       <router-link tag="li" to="/blog">blog</router-link>
-      <li>contact</li>
+      <li @click="listeners.contactClick">contact</li>
     </ul>
-    <!-- <q-btn round flat color="black" icon="fas fa-bars" class="hamburger"/> -->
   </nav>
 </template>
 
@@ -66,7 +65,5 @@ nav {
 .logo {
   text-transform uppercase
   font-size 2.5rem
-  font-family serif
-  font-weight bold
 }
 </style>

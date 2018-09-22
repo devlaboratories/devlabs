@@ -4,6 +4,7 @@ module.exports = function (ctx) {
   return {
     // app plugins (/src/plugins)
     plugins: [
+      'vuelidate'
     ],
     css: [
       'app.styl'
@@ -50,6 +51,8 @@ module.exports = function (ctx) {
         'QPage',
         'QSpinnerGears',
         'QIcon',
+        'QBtn',
+        'QModal',
         'QCard',
         'QCardTitle',
         'QCardMain',
@@ -57,7 +60,8 @@ module.exports = function (ctx) {
         'QCardSeparator'
       ],
       directives: [
-        'Ripple'
+        'Ripple',
+        'CloseOverlay'
       ],
       // Quasar plugins
       plugins: [
