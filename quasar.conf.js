@@ -1,4 +1,6 @@
 // Configuration for your app
+const path = require('path')
+const PrerenderSPAPlugin = require('prerender-spa-plugin')
 
 module.exports = function (ctx) {
   return {
@@ -31,6 +33,8 @@ module.exports = function (ctx) {
           loader: 'eslint-loader',
           exclude: /(node_modules|quasar)/
         })
+        const prerender = new PrerenderSPAPlugin(path.resolve(__dirname, 'dist/spa-mat'), ['/']) 
+        cfg.plugins.push(prerender)
       },
       chainWebpack (chain) {
         chain.resolve.alias.set('statics', require('path').resolve(__dirname, './src/statics'))

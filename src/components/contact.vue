@@ -61,19 +61,40 @@ export default {
   },
   methods: {
     async submit (event) {
-      const action = event.target.action
+      const url = event.target.action
+      const data = this.serialize({
+        'form-name': 'devlabs-inquiry',
+        name: this.name,
+        email: this.email,
+        message: this.message
+      })
       try {
-        const response = await axios.post(action, {
-          'form-name': 'devlabs-inquiry',
-          name: this.name,
-          email: this.email,
-          message: this.message
+        const response = await axios.post(url, data, {
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          }
         })
+        // const response = await axios(url, {
+        //   method: 'POST',
+        //   headers: {
+        //     'Content-Type': 'application/x-www-form-urlencoded'
+        //   },
+        //   data
+        // })
         console.log(response.data)
         this.$emit('submit')
       } catch (error) {
         this.$emit('error')
       }
+    },
+    serialize (obj) {
+      let str = []
+      for (let p in obj) {
+        if (obj.hasOwnProperty(p)) {
+          str.push(encodeURIComponent(p) + '=' + encodeURIComponent(obj[p]))
+        }
+      }
+      return str.join('&')
     }
   }
 }

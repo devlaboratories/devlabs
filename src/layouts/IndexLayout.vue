@@ -32,7 +32,7 @@ export default {
         message: 'Message sent!',
         detail: 'Thanks for messaging us, we\'ll get back to you shortly.',
         timeout: 5000,
-        position: 'bottom-right',
+        position: 'bottom-left',
         type: 'positive',
         color: 'black',
         textColor: 'white',
@@ -45,7 +45,7 @@ export default {
         message: 'Something went wrong',
         detail: 'Try again sometime later. You could also us chat us in Facebook.',
         timeout: 5000,
-        position: 'bottom-right',
+        position: 'bottom-left',
         type: 'negative'
       })
     }
