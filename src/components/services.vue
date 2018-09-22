@@ -28,11 +28,11 @@ export default {
 .services {
   width 100%
   display grid
-  grid-template-columns repeat(auto-fit, minmax(25rem, 1fr))
+  grid-template-columns repeat(auto-fit, minmax(30rem, 1fr))
   grid-column-gap 3.5rem
   grid-row-gap 3rem
 
-  +respond-max($breakpoint-xs) {
+  +respond-max($breakpoint-md) {
     grid-template-columns 1fr
   }
 
@@ -53,7 +53,7 @@ export default {
       }
     }
 
-    +respond-max($breakpoint-xs) {
+    +respond-max($breakpoint-md) {
       &:nth-child(odd), &:nth-child(even) {
         flex-direction column-reverse
         .content {
