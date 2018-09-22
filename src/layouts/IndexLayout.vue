@@ -38,8 +38,7 @@ export default {
         detail: 'Thanks for messaging us, we\'ll get back to you shortly.',
         timeout: 5000,
         position: 'bottom-left',
-        type: 'positive',
-        color: 'black',
+        color: 'secondary',
         textColor: 'white',
         icon: 'far fa-thumbs-up'
       })
