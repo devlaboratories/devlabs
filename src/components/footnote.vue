@@ -25,7 +25,7 @@
           </div>
           <div class="socials__link">devlaboratories@gmail.com</div>
         </div>
-        <div class="q-mt-lg text-right">Copyright &copy; 2018 Devlabs. All rights reserved.</div>
+        <div class="q-mt-lg text-right copyright-text">Copyright &copy; 2018 Devlabs. All rights reserved.</div>
       </div>
     </div>
   </footer>
@@ -80,6 +80,10 @@ export default {
 .side {
   flex 1 0 40%
 
+  +respond-max($breakpoint-xs) {
+    flex-direction column
+  }
+
   &--links {
     display flex
     align-items center
@@ -108,6 +112,9 @@ export default {
       display flex
       justify-content flex-end
       align-items center
+      +respond-max($breakpoint-sm) {
+        justify-content center
+      }
       &__link {
         margin-left 1rem
         transition all .3s ease
@@ -115,6 +122,11 @@ export default {
         &:hover {
           color $primary-dark
         }
+      }
+    }
+    .copyright-text {
+      +respond-max($breakpoint-sm) {
+        text-align center
       }
     }
   }

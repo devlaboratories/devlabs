@@ -30,6 +30,10 @@ header {
   background-size cover
   background-position center
   height 100vh
+  +respond-max($breakpoint-xxxs) {
+    height 100%;
+    padding-top 20vh
+  }
 }
 
 .header__content {
