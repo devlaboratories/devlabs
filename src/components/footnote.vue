@@ -5,7 +5,7 @@
 
         <div class="logo">
           <p class="logo__icon">Δ</p>
-          <p class="logo__text">devlabs</p>
+          <p class="logo__text">{{name}}</p>
         </div>
 
         <ul>
@@ -17,24 +17,32 @@
       </div>
       <div class="side side--copyright">
         <div class="socials">
-          <div class="socials__link" @click="openURL('https://twitter.com/DevLaboratories')">
+          <div class="socials__link" @click="openURL(links.twitter)">
             <q-icon name="fab fa-twitter" size="1.4rem"/>
           </div>
-          <div class="socials__link" @click="openURL('https://www.facebook.com/devlaboratories/')">
+          <div class="socials__link" @click="openURL(links.facebook)">
             <q-icon name="fab fa-facebook" size="1.4rem"/>
           </div>
-          <div class="socials__link">devlaboratories@gmail.com</div>
+          <div class="socials__link">{{links.email}}</div>
         </div>
-        <div class="q-mt-lg text-right copyright-text">Copyright &copy; 2018 Devlabs. All rights reserved.</div>
+        <div class="q-mt-lg text-right copyright-text">Copyright &copy; 2018 {{name}}. All rights reserved.</div>
       </div>
     </div>
   </footer>
 </template>
 
 <script>
+import {name} from '../../package.json'
+import LINKS from '../statics/data/links.json'
 import {openURL} from 'quasar'
 export default {
   name: 'Footnote',
+  created () {
+    this.links = LINKS
+  },
+  data () {
+    return { name }
+  },
   methods: {
     openURL
   }

@@ -2,7 +2,7 @@
   <div class="q-pa-xl bg-primary contact">
     <q-btn size="sm" round flat icon="fas fa-times" color="white" class="close-btn" v-close-overlay />
     <h5 class="title">Have something in mind?</h5>
-    <form name="devlabs-inquiry" @submit.prevent="submit" method="POST" data-netlify="true" data-netlify-honeypot="fullname">
+    <form name="Inquiries" @submit.prevent="submit" method="POST" data-netlify="true" data-netlify-honeypot="fullname">
       <input class="hidden" name="fullname"/>
       <input
         placeholder="Your name"
@@ -32,12 +32,12 @@
         />
       <div class="actions q-mt-lg">
         <div class="socials">
-          <q-icon @click.native="openURL('https://twitter.com/DevLaboratories')" class="social twitter" name="fab fa-twitter" size="1.5rem" />
-          <q-icon @click.native="openURL('https://www.facebook.com/devlaboratories/')" class="social facebook" name="fab fa-facebook-square" size="1.5rem" />
+          <q-icon @click.native="openURL(links.twitter)" class="social twitter" name="fab fa-twitter" size="1.5rem" />
+          <q-icon @click.native="openURL(links.facebook)" class="social facebook" name="fab fa-facebook-square" size="1.5rem" />
         </div>
         <q-btn :disable="$v.$invalid" type="submit" size="md" class="submit" color="secondary">Submit</q-btn>
       </div>
-      <a class="link mail" href="mailto:devlaboratories@gmail.com">devlaboratories@gmail.com</a>
+      <a class="link mail" :href="`mailto:${links.email}`">{{links.email}}</a>
     </form>
   </div>
 </template>
@@ -46,8 +46,13 @@
 import {required, email} from 'vuelidate/lib/validators'
 import {openURL} from 'quasar'
 import axios from 'axios'
+
+import LINKS from '../statics/data/links.json'
 export default {
   name: 'Contact',
+  created () {
+    this.links = LINKS
+  },
   data () {
     return {
       name: '',
