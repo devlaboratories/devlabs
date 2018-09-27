@@ -1,8 +1,8 @@
 {
-  "name": "devlabs",
+  "name": "CylemLabs",
   "version": "1.0.0",
-  "description": "DevLaboratories is an R&D Software Development company based in Manila, Philippines. Our lab builds for the Web, Desktop and Mobile specializing in B2B and much more. We innovate like there's no tomorrow.",
-  "productName": "Devlaboratories | Welcome to our R&D Software Development Lab.",
+  "description": "CylemLabs is an R&D Software Development company based in Manila, Philippines. Our lab builds for the Web, Desktop and Mobile specializing in B2B and much more. We innovate like there's no tomorrow.",
+  "productName": "CylemLabs | Welcome to our R&D Software Development Lab.",
   "cordovaId": "org.cordova.quasar.app",
   "author": "yev <josephharveyangeles@gmail.com>",
   "private": true,
